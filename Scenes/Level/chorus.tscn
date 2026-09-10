@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://uae7f2j6h5s4"]
+
+[ext_resource type="PackedScene" uid="uid://kplvhcmi5x05" path="res://Scenes/player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://dfsdlapbf6371" path="res://Scripts/Core/WaveField.cs" id="2_wave"]
+[ext_resource type="PackedScene" uid="uid://rac4m6f8n3p1" path="res://Scenes/Elements/水面.tscn" id="5_water"]
+[ext_resource type="PackedScene" uid="uid://m50ai2b4j8l6" path="res://Scenes/Elements/终点.tscn" id="12_portal"]
+[ext_resource type="PackedScene" uid="uid://r2d5g8h1k4n7" path="res://Scenes/Elements/关卡HUD.tscn" id="13_hud"]
+[ext_resource type="Script" uid="uid://d0lmw3ccckito" path="res://Scripts/Elements/KillZone.cs" id="14_kill"]
+
+[sub_resource type="RectangleShape2D" id="sh_groundA"]
+size = Vector2(1791, 32)
+
+[sub_resource type="RectangleShape2D" id="sh_edge"]
+size = Vector2(32, 360)
+
+[sub_resource type="RectangleShape2D" id="sh_void"]
+size = Vector2(1800, 140)
+
+[node name="Chorus" type="Node2D" unique_id=214809022]
+
+[node name="WaveField" type="Node2D" parent="." unique_id=969658656]
+z_index = 101
+script = ExtResource("2_wave")
+Bounds = Rect2(0, 0, 1800, 360)
+MaxRadius = 480.0
+
+[node name="Terrain" type="Node2D" parent="." unique_id=1074278892]
+
+[node name="GroundA" type="StaticBody2D" parent="Terrain" unique_id=1945229790]
+position = Vector2(250, 336)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/GroundA" unique_id=104248375]
+position = Vector2(645.5, 0)
+shape = SubResource("sh_groundA")
+
+[node name="Visual" type="ColorRect" parent="Terrain/GroundA" unique_id=854280052]
+offset_left = -250.0
+offset_top = -16.0
+offset_right = 250.0
+offset_bottom = 16.0
+color = Color(0.35, 0.38, 0.44, 1)
+
+[node name="GroundD" type="StaticBody2D" parent="Terrain" unique_id=382048607]
+position = Vector2(1730, 336)
+collision_mask = 0
+
+[node name="EdgeL" type="StaticBody2D" parent="Terrain" unique_id=1960097131]
+position = Vector2(-16, 180)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/EdgeL" unique_id=1821177471]
+shape = SubResource("sh_edge")
+
+[node name="Visual" type="ColorRect" parent="Terrain/EdgeL" unique_id=1074402961]
+offset_left = -16.0
+offset_top = -180.0
+offset_right = 16.0
+offset_bottom = 180.0
+color = Color(0.22, 0.23, 0.28, 1)
+
+[node name="EdgeR" type="StaticBody2D" parent="Terrain" unique_id=21985493]
+position = Vector2(1816, 180)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/EdgeR" unique_id=497265160]
+shape = SubResource("sh_edge")
+
+[node name="Visual" type="ColorRect" parent="Terrain/EdgeR" unique_id=790446278]
+offset_left = -16.0
+offset_top = -180.0
+offset_right = 16.0
+offset_bottom = 180.0
+color = Color(0.22, 0.23, 0.28, 1)
+
+[node name="水面1" parent="." unique_id=9500740 instance=ExtResource("5_water")]
+position = Vector2(500, 316)
+
+[node name="Portal" parent="." unique_id=436833179 instance=ExtResource("12_portal")]
+position = Vector2(1750, 296)
+Currentlevel = 4
+
+[node name="Void" type="Area2D" parent="." unique_id=2047923269]
+position = Vector2(900, 470)
+scale = Vector2(1.1, 1)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("14_kill")
+
+[node name="Shape" type="CollisionShape2D" parent="Void" unique_id=548293390]
+shape = SubResource("sh_void")
+
+[node name="Player" parent="." unique_id=2074873945 instance=ExtResource("1_player")]
+position = Vector2(60, 316)
+
+[node name="LevelHud" parent="." unique_id=1033966252 instance=ExtResource("13_hud")]
+visible = false
+TitleText = "第四关 · 合唱"
+NextScene = "res://Scenes/main.tscn"

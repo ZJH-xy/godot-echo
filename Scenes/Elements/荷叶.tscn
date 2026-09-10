@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://f7r2b4u6c1e8"]
+
+[ext_resource type="Script" uid="uid://b8yk6mvscl8xf" path="res://Scripts/Elements/Scenery/LotusLeaf.cs" id="1_leaf"]
+
+[sub_resource type="RectangleShape2D" id="sh_leaf"]
+size = Vector2(40, 12)
+
+[node name="荷叶" type="AnimatableBody2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_leaf")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("sh_leaf")

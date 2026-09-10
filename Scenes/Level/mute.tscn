@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://7b3d1e5f8n2"]
+
+[ext_resource type="PackedScene" uid="uid://kplvhcmi5x05" path="res://Scenes/player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://dfsdlapbf6371" path="res://Scripts/Core/WaveField.cs" id="2_wave"]
+[ext_resource type="PackedScene" uid="uid://5q13gcuhs34a" path="res://Scenes/Elements/反射墙.tscn" id="3_mirror"]
+[ext_resource type="PackedScene" uid="uid://n601j3c5lam7" path="res://Scenes/Elements/声波放大器.tscn" id="4_amp"]
+[ext_resource type="PackedScene" uid="uid://c4n7y1r308b5" path="res://Scenes/Elements/声波检测器.tscn" id="5_det"]
+[ext_resource type="PackedScene" uid="uid://b3m6yaq2y7a4" path="res://Scenes/Elements/声控门.tscn" id="6_door"]
+[ext_resource type="PackedScene" uid="uid://m50ai2b4j8l6" path="res://Scenes/Elements/终点.tscn" id="7_portal"]
+[ext_resource type="PackedScene" uid="uid://r2d5g8h1k4n7" path="res://Scenes/Elements/关卡HUD.tscn" id="8_hud"]
+[ext_resource type="Script" uid="uid://d0lmw3ccckito" path="res://Scripts/Elements/KillZone.cs" id="9_kill"]
+
+[sub_resource type="RectangleShape2D" id="sh_groundA"]
+size = Vector2(640, 32)
+
+[sub_resource type="RectangleShape2D" id="sh_groundB"]
+size = Vector2(660, 32)
+
+[sub_resource type="RectangleShape2D" id="sh_post"]
+size = Vector2(16, 224)
+
+[sub_resource type="RectangleShape2D" id="sh_edge"]
+size = Vector2(32, 360)
+
+[sub_resource type="RectangleShape2D" id="sh_void"]
+size = Vector2(1500, 140)
+
+[node name="Mute" type="Node2D" unique_id=135545452]
+
+[node name="WaveField" type="Node2D" parent="." unique_id=1681633181]
+z_index = 101
+script = ExtResource("2_wave")
+Bounds = Rect2(0, 0, 1500, 360)
+MaxRadius = 480.0
+EchoDelay = 30.0
+
+[node name="Terrain" type="Node2D" parent="." unique_id=1948989347]
+
+[node name="GroundA" type="StaticBody2D" parent="Terrain" unique_id=292807259]
+position = Vector2(320, 336)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/GroundA" unique_id=1451282013]
+shape = SubResource("sh_groundA")
+
+[node name="Visual" type="ColorRect" parent="Terrain/GroundA" unique_id=1089417148]
+offset_left = -320.0
+offset_top = -16.0
+offset_right = 320.0
+offset_bottom = 16.0
+color = Color(0.34, 0.36, 0.42, 1)
+
+[node name="GroundB" type="StaticBody2D" parent="Terrain" unique_id=424193510]
+position = Vector2(1170, 336)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/GroundB" unique_id=1445701171]
+shape = SubResource("sh_groundB")
+
+[node name="Visual" type="ColorRect" parent="Terrain/GroundB" unique_id=1153801893]
+offset_left = -330.0
+offset_top = -16.0
+offset_right = 330.0
+offset_bottom = 16.0
+color = Color(0.34, 0.36, 0.42, 1)
+
+[node name="GatePostL" type="StaticBody2D" parent="Terrain" unique_id=325169346]
+position = Vector2(1219, 208)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/GatePostL" unique_id=1097557436]
+shape = SubResource("sh_post")
+
+[node name="Visual" type="ColorRect" parent="Terrain/GatePostL" unique_id=547132659]
+offset_left = -8.0
+offset_top = -112.0
+offset_right = 8.0
+offset_bottom = 112.0
+color = Color(0.26, 0.28, 0.34, 1)
+
+[node name="GatePostR" type="StaticBody2D" parent="Terrain" unique_id=1647018551]
+position = Vector2(1299, 208)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/GatePostR" unique_id=1679711350]
+shape = SubResource("sh_post")
+
+[node name="Visual" type="ColorRect" parent="Terrain/GatePostR" unique_id=876222529]
+offset_left = -8.0
+offset_top = -112.0
+offset_right = 8.0
+offset_bottom = 112.0
+color = Color(0.26, 0.28, 0.34, 1)
+
+[node name="EdgeL" type="StaticBody2D" parent="Terrain" unique_id=1919631373]
+position = Vector2(-16, 180)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/EdgeL" unique_id=255186253]
+shape = SubResource("sh_edge")
+
+[node name="Visual" type="ColorRect" parent="Terrain/EdgeL" unique_id=1950042862]
+offset_left = -16.0
+offset_top = -180.0
+offset_right = 16.0
+offset_bottom = 180.0
+color = Color(0.22, 0.23, 0.28, 1)
+
+[node name="EdgeR" type="StaticBody2D" parent="Terrain" unique_id=576424220]
+position = Vector2(1516, 180)
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="Terrain/EdgeR" unique_id=1572751351]
+shape = SubResource("sh_edge")
+
+[node name="Visual" type="ColorRect" parent="Terrain/EdgeR" unique_id=1889247693]
+offset_left = -16.0
+offset_top = -180.0
+offset_right = 16.0
+offset_bottom = 180.0
+color = Color(0.22, 0.23, 0.28, 1)
+
+[node name="Mirror1" parent="." unique_id=1455320149 instance=ExtResource("3_mirror")]
+position = Vector2(450, 190)
+rotation = 1.5707964
+
+[node name="Mirror2" parent="." unique_id=1482285824 instance=ExtResource("3_mirror")]
+position = Vector2(1000, 160)
+rotation = -0.7853982
+scale = Vector2(1.5, 1)
+
+[node name="Mirror3" parent="." unique_id=945859101 instance=ExtResource("3_mirror")]
+position = Vector2(1263, 100)
+rotation = 0.7853982
+
+[node name="Amp1" parent="." unique_id=1462489201 instance=ExtResource("4_amp")]
+position = Vector2(525, 296)
+AmplifyFactor = 1.6
+
+[node name="Detector1" parent="." unique_id=1783059313 instance=ExtResource("5_det")]
+position = Vector2(1243, 143)
+MinIntensity = 0.05
+
+[node name="门1" parent="." unique_id=1093144695 instance=ExtResource("6_door")]
+position = Vector2(1263, 235)
+DetectorPath = NodePath("../Detector1")
+
+[node name="Portal" parent="." unique_id=1486602841 instance=ExtResource("7_portal")]
+position = Vector2(1440, 296)
+Currentlevel = 3
+
+[node name="Void" type="Area2D" parent="." unique_id=434705583]
+position = Vector2(750, 470)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("9_kill")
+
+[node name="Shape" type="CollisionShape2D" parent="Void" unique_id=1851385809]
+shape = SubResource("sh_void")
+
+[node name="Player" parent="." unique_id=876454826 instance=ExtResource("1_player")]
+position = Vector2(60, 316)
+
+[node name="LevelHud" parent="." unique_id=2024580814 instance=ExtResource("8_hud")]
+TitleText = "第三关 · 失声"
+NextScene = "chorus.tscn"

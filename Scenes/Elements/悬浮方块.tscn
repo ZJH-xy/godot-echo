@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://g8s3c5v7d2ga"]
+
+[ext_resource type="Script" uid="uid://dr0q2vxb7kn4m" path="res://Scripts/Elements/FloatBlock.cs" id="1_float"]
+
+[sub_resource type="RectangleShape2D" id="sh_body"]
+size = Vector2(40, 36)
+
+[sub_resource type="RectangleShape2D" id="sh_top"]
+size = Vector2(46, 12)
+
+[node name="悬浮方块" type="AnimatableBody2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_float")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("sh_body")
+
+[node name="TopSensor" type="Area2D" parent="."]
+position = Vector2(0, -23)
+collision_layer = 0
+collision_mask = 2
+
+[node name="Shape" type="CollisionShape2D" parent="TopSensor"]
+shape = SubResource("sh_top")

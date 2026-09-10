@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://i1u5e7yaf4h2"]
+
+[ext_resource type="Script" uid="uid://b5tq9wj4rd3xs" path="res://Scripts/Elements/SoundBridge.cs" id="1_bridge"]
+
+[sub_resource type="RectangleShape2D" id="sh_bridge"]
+size = Vector2(30, 14)
+
+[node name="声音桥" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_bridge")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("sh_bridge")

@@ -1,0 +1,212 @@
+[gd_scene format=3 uid="uid://r2d5g8h1k4n7"]
+
+[ext_resource type="Script" uid="uid://dygsmdmnvwcel" path="res://Scripts/UI/LevelHud.cs" id="1_hud"]
+[ext_resource type="Theme" uid="uid://bgkxtw5n2fcmv" path="res://Assets/Fonts/UITheme.tres" id="2_theme"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_hintbox"]
+bg_color = Color(0.043137256, 0.05882353, 0.101960786, 0.92)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.44705883, 0.7176471, 0.8980392, 0.85)
+
+[sub_resource type="StyleBoxFlat" id="StyleBox_keycap"]
+bg_color = Color(0.11764706, 0.1764706, 0.27450982, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6, 0.82, 0.98, 0.9)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="关卡HUD" type="CanvasLayer" unique_id=1644253128 node_paths=PackedStringArray("_titleColor", "_titleLabel", "_hintBox", "_hintText", "_hintKeyCap", "_hintKeyLabel", "_completeLayer", "_completeTitle", "_completeSub")]
+layer = 10
+script = ExtResource("1_hud")
+_titleColor = NodePath("ColorRect")
+_titleLabel = NodePath("ColorRect/TitleLabel")
+_hintBox = NodePath("HintBox")
+_hintText = NodePath("HintBox/Panel/Text")
+_hintKeyCap = NodePath("HintBox/Panel/KeyCap")
+_hintKeyLabel = NodePath("HintBox/Panel/KeyCap/KeyLabel")
+_completeLayer = NodePath("CompleteLayer")
+_completeTitle = NodePath("CompleteLayer/CompleteTitle")
+_completeSub = NodePath("CompleteLayer/CompleteSub")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1049275402]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.072842576, 0.07284265, 0.072842605, 1)
+
+[node name="TitleLabel" type="Label" parent="ColorRect" unique_id=380355408]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -120.0
+offset_top = -11.5
+offset_right = 120.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+theme_override_font_sizes/font_size = 32
+text = "TEXT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HintBox" type="Control" parent="." unique_id=2100224001]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240.0
+offset_top = 10.0
+offset_right = 240.0
+offset_bottom = 70.0
+grow_horizontal = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+
+[node name="Panel" type="Panel" parent="HintBox" unique_id=2100224002]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_hintbox")
+
+[node name="Header" type="ColorRect" parent="HintBox/Panel" unique_id=2100224003]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = 20.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.101960786, 0.15686275, 0.24313726, 1)
+
+[node name="Title" type="Label" parent="HintBox/Panel" unique_id=2100224004]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 2.0
+offset_right = -10.0
+offset_bottom = 20.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.59607846, 0.83137256, 0.9882353, 1)
+theme_override_font_sizes/font_size = 11
+text = "提示"
+vertical_alignment = 1
+
+[node name="KeyCap" type="Panel" parent="HintBox/Panel" unique_id=2100224005]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 12.0
+offset_top = -13.0
+offset_right = 38.0
+offset_bottom = 13.0
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 7)
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBox_keycap")
+
+[node name="KeyLabel" type="Label" parent="HintBox/Panel/KeyCap" unique_id=2100224006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8509804, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "J"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Label" parent="HintBox/Panel" unique_id=2100224007]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = 22.0
+offset_right = -14.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.8980392, 0.9490196, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "提示文本"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="CompleteLayer" type="Control" parent="." unique_id=453284974]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+
+[node name="Dim" type="ColorRect" parent="CompleteLayer" unique_id=975375136]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.72)
+
+[node name="CompleteTitle" type="Label" parent="CompleteLayer" unique_id=1950217887]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -34.0
+offset_right = 150.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "关卡完成！"
+horizontal_alignment = 1
+
+[node name="CompleteSub" type="Label" parent="CompleteLayer" unique_id=974711265]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 8.0
+offset_right = 150.0
+offset_bottom = 38.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.6, 0.65, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "即将返回主菜单…"
+horizontal_alignment = 1

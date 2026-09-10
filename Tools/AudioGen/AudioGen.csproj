@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- 占位音频生成器（独立工具，不参与游戏构建；由 回声.csproj 的 Compile Remove 排除） -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>AudioGen</AssemblyName>
+    <RootNamespace>AudioGen</RootNamespace>
+    <!-- 离线环境没有 apphost 包：只产出 dll，用 dotnet AudioGen.dll 运行（dotnet run 同样可用） -->
+    <UseAppHost>false</UseAppHost>
+  </PropertyGroup>
+
+</Project>

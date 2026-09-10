@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://l4x8h1a3i7k5"]
+
+[ext_resource type="Script" uid="uid://d0lmw3ccckito" path="res://Scripts/Elements/KillZone.cs" id="1_kill"]
+
+[sub_resource type="RectangleShape2D" id="sh_kill"]
+size = Vector2(160, 60)
+
+[node name="危险区" type="Area2D"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_kill")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("sh_kill")

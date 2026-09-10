@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://rac4m6f8n3p1"]
+
+[ext_resource type="Script" uid="uid://cqk3x8m2v6zrn" path="res://Scripts/Elements/Scenery/WaterSurface.cs" id="1_water"]
+
+[node name="水面" type="Node2D"]
+script = ExtResource("1_water")

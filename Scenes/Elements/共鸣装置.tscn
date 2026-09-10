@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://o7a2k4d6l1n8"]
+
+[ext_resource type="Script" uid="uid://c4x6n1r9z7w2k" path="res://Scripts/Elements/ResonanceDevice.cs" id="1_reso"]
+
+[node name="共鸣装置" type="Node2D"]
+script = ExtResource("1_reso")

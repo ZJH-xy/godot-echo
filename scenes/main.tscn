@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://c884ka7q1cw51"]
+
+[ext_resource type="Script" uid="uid://b3hios6ggrrhm" path="res://Scripts/UI/Main.cs" id="1_main"]
+[ext_resource type="Theme" uid="uid://bgkxtw5n2fcmv" path="res://Assets/Fonts/UITheme.tres" id="2_theme"]
+
+[node name="Main" type="Control" unique_id=721461876 node_paths=PackedStringArray("_title", "_subtitle", "_continueButton", "_startButton", "_settingButton", "_quitButton", "_langButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_main")
+_title = NodePath("MarginContainer/Center/Title")
+_subtitle = NodePath("MarginContainer/Center/Subtitle")
+_continueButton = NodePath("MarginContainer/Center/ContinueButton")
+_startButton = NodePath("MarginContainer/Center/StartButton")
+_settingButton = NodePath("MarginContainer/Center/SettingButton")
+_quitButton = NodePath("MarginContainer/Center/QuitButton")
+_langButton = NodePath("MarginContainer/LangButton")
+
+[node name="BG" type="ColorRect" parent="." unique_id=816443839]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.04, 0.045, 0.08, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1294631299]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 35
+theme_override_constants/margin_bottom = 30
+
+[node name="Center" type="VBoxContainer" parent="MarginContainer" unique_id=645195041]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Title" type="Label" parent="MarginContainer/Center" unique_id=255520834]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "《步步高声》"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="MarginContainer/Center" unique_id=1796595274]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.65, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "回声机制原型 · 2D 平台跳跃解谜"
+horizontal_alignment = 1
+
+[node name="Spacer" type="Control" parent="MarginContainer/Center" unique_id=1583816464]
+custom_minimum_size = Vector2(0, 18)
+layout_mode = 2
+
+[node name="ContinueButton" type="Button" parent="MarginContainer/Center" unique_id=1859129579]
+custom_minimum_size = Vector2(135, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "继续"
+
+[node name="StartButton" type="Button" parent="MarginContainer/Center" unique_id=1272599401]
+custom_minimum_size = Vector2(135, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "新开始"
+
+[node name="SettingButton" type="Button" parent="MarginContainer/Center" unique_id=208647653]
+custom_minimum_size = Vector2(135, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "设置"
+
+[node name="QuitButton" type="Button" parent="MarginContainer/Center" unique_id=410078563]
+custom_minimum_size = Vector2(135, 40)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "退出"
+
+[node name="LangButton" type="Button" parent="MarginContainer" unique_id=987654321]
+custom_minimum_size = Vector2(75, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "English"

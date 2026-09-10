@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://k3w7ha02h6j4"]
+
+[ext_resource type="Script" uid="uid://d2v7q3h8t50am" path="res://Scripts/Elements/SpringBlock.cs" id="1_spring"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jam8v"]
+size = Vector2(20, 24)
+
+[node name="弹力方块" type="StaticBody2D" unique_id=50275949]
+script = ExtResource("1_spring")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1407686709]
+shape = SubResource("RectangleShape2D_jam8v")

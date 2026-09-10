@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ds728j6bngvcw"]
+
+[ext_resource type="Script" uid="uid://xphm7xkojtuy" path="res://Scripts/Elements/Checkpoint.cs" id="1_checkpoint"]
+
+[node name="存档点" type="Node2D" unique_id=417151646]
+script = ExtResource("1_checkpoint")

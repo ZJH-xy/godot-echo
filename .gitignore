@@ -3,3 +3,10 @@
 /android/
 /.vs
 /.vscode
+/Properties
+# 美术/音频等资源不入库（本地保留）：只有代码依赖的文本资源（字体主题/翻译/着色器）才强制入库
+/Assets
+
+# .NET 构建产物（含 Tools/ 下独立工具）
+bin/
+obj/

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://p8b3l5e7m2pa"]
+
+[ext_resource type="Script" uid="uid://e7wq5m2k9n4xd" path="res://Scripts/Elements/SoundWaveRefreshPoint.cs" id="1_refresh"]
+
+[node name="声波刷新点" type="Node2D"]
+script = ExtResource("1_refresh")

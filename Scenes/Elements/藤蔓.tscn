@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://d5p802s4bac6"]
+
+[ext_resource type="Script" uid="uid://baedb8g17iusn" path="res://Scripts/Elements/Vine.cs" id="1_vine"]
+
+[sub_resource type="RectangleShape2D" id="sh_grab"]
+size = Vector2(26, 160)
+
+[node name="藤蔓" type="Node2D"]
+script = ExtResource("1_vine")
+
+[node name="GrabArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Shape" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("sh_grab")

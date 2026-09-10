@@ -1,0 +1,12 @@
+<Project Sdk="Godot.NET.Sdk/4.7.2">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+
+  <!-- Tools/ 下的独立工具（如占位音频生成器）不参与游戏构建 -->
+  <ItemGroup>
+    <Compile Remove="Tools/**/*.cs" />
+  </ItemGroup>
+</Project>

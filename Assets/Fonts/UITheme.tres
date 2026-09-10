@@ -1,0 +1,8 @@
+[gd_resource type="Theme" format=3 uid="uid://bgkxtw5n2fcmv"]
+
+[sub_resource type="SystemFont" id="SystemFont_ui"]
+font_names = PackedStringArray("Microsoft YaHei", "微软雅黑", "Noto Sans CJK SC", "PingFang SC", "sans-serif")
+
+[resource]
+default_font = SubResource("SystemFont_ui")
+default_font_size = 16
