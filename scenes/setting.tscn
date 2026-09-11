@@ -26,7 +26,7 @@ offset_right = -94.0
 offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.34540182, 0.43559524, 0.5769371, 1)
+color = Color(0.156174, 0.20665318, 0.29077804, 0.9372549)
 
 [node name="设置" type="Label" parent="." unique_id=407609531]
 layout_mode = 1
