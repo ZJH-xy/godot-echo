@@ -1,0 +1,138 @@
+# LANGUAGE translation for 步步高声 for the following files:
+# res://scenes/main.tscn
+#
+# Automatically generated, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 步步高声\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: scenes/main.tscn
+msgid "《步步高声》"
+msgstr "Ever Louder"
+
+#: scenes/main.tscn
+msgid "回声机制原型 · 2D 平台跳跃解谜"
+msgstr "Echo Mechanism Prototype · 2D Platform Puzzle"
+
+#: scenes/main.tscn
+msgid "继续"
+msgstr "Continue"
+
+#: scenes/main.tscn
+msgid "新开始"
+msgstr "New Game"
+
+#: scenes/main.tscn
+msgid "设置"
+msgstr "Settings"
+
+#: scenes/main.tscn
+msgid "退出"
+msgstr "Quit"
+
+#: scenes/main.tscn
+msgid "English"
+msgstr "English"
+
+#: scenes/setting.tscn
+msgid "分辨率："
+msgstr "Resolution:"
+
+#: scenes/setting.tscn
+msgid "手柄震动强度："
+msgstr "Controller Vibration:"
+
+#: scenes/setting.tscn
+msgid "游戏音量："
+msgstr "Game Volume:"
+
+#: scenes/setting.tscn
+msgid "返回"
+msgstr "Back"
+
+msgid "步步高声"
+msgstr "Ever Louder"
+
+#: scenes/Level/echo.tscn
+msgid "序章 · 初啼"
+msgstr "Prologue · First Cry"
+
+#: scenes/Level/echo.tscn
+msgid "第一关 · 余音"
+msgstr "Level 1 · Afterglow"
+
+#: scenes/Level/blind.tscn
+msgid "第二关 · 盲视"
+msgstr "Level 2 · Blind"
+
+#: scenes/Level/mute.tscn
+msgid "第三关 · 失声"
+msgstr "Level 3 · Mute"
+
+#: scenes/Level/chorus.tscn
+msgid "第四关 · 合唱"
+msgstr "Level 4 · Chorus"
+
+#: scenes/Level/chorus.tscn
+msgid "关卡完成！"
+msgstr "Level Complete!"
+
+#: scenes/Level/chorus.tscn
+msgid "即将前往下一章…"
+msgstr "Proceeding to the next chapter..."
+
+#: scenes/Level/chorus.tscn
+msgid "感谢体验！"
+msgstr "Thanks for playing!"
+
+#: scenes/Level/chorus.tscn
+msgid "即将返回主菜单…"
+msgstr "Returning to the main menu..."
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "提示"
+msgstr "Hint"
+
+#: Scenes/Level/prologue.tscn（提示区_起手）
+msgid "← → 移动　空格跳跃"
+msgstr "← → Move　Space Jump"
+
+#: Scenes/Level/prologue.tscn（提示区_发声）
+msgid "按 J 发声，声波会向四周扩散"
+msgstr "Press J to emit a sound wave that spreads outward"
+
+#: Scenes/Level/prologue.tscn（提示区_蓄力）
+msgid "长按 J 蓄力，方向键瞄准可发出扇形声波"
+msgstr "Hold J to charge; aim with the arrow keys, release for a fan-shaped wave"
+
+#: Scenes/Level/echo.tscn（提示区）
+msgid "镜子"
+msgstr "Mirror"
+
+#: Scenes/Level/echo.tscn（提示区2）
+msgid "长按蓄力"
+msgstr "Hold to charge"
+
+#: Scenes/Level/echo.tscn（提示区3）
+msgid "空中按 J 进入子弹时间"
+msgstr "Press J in mid-air for bullet time"
+
+#: Scenes/Level/echo.tscn（提示区4）
+msgid "方向键 + J 集中释放"
+msgstr "Arrow keys + J to focus the wave"
+
+#: Scenes/Level/echo.tscn（提示区5）
+msgid "放大器"
+msgstr "Amplifier"
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "WASD 移动　空格跳跃"
+msgstr "WASD Move　Space Jump"

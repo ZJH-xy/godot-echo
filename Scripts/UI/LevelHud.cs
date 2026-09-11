@@ -1,4 +1,5 @@
 using Godot;
+using System;
 
 /// <summary>
 /// 关卡 HUD：关卡标题淡入淡出、教学提示对话框、过关结算覆盖层。
@@ -21,6 +22,9 @@ public partial class LevelHud : CanvasLayer {
 	[Export] private Control _completeLayer;
 	[Export] private Label _completeTitle;
 	[Export] private Label _completeSub;
+
+	[Export] private String _completeTitleText = "关卡完成！";
+	[Export] private String _completeSubText = "即将前往下一章…";
 
 	/// <summary>当前提示的发起者（提示区节点）：只有发起者自己的"离开"才能收起对话框，多个区域互不误清。</summary>
 	private Node _hintOwner;
@@ -57,8 +61,8 @@ public partial class LevelHud : CanvasLayer {
 		}
 
 		_titleLabel.Text = Tr(TitleText);
-		_completeTitle.Text = Tr(_completeTitle.Text);
-		_completeSub.Text = Tr(_completeSub.Text);
+		_completeTitle.Text = Tr(_completeTitleText);
+		_completeSub.Text = Tr(_completeSubText);
 		_titleLabel.Modulate = new Color(1, 1, 1, 0);
 		Log.Info($"进入关卡：{TitleText}");
 		var tween = CreateTween();

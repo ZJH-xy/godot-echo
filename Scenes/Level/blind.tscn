@@ -395,9 +395,11 @@ mouse_filter = 2
 color = Color(0.050980393, 0.07058824, 0.10980392, 0.96862745)
 script = ExtResource("13_fog")
 
+[node name="BlindReveal" type="Node2D" parent="." unique_id=845925512]
+script = ExtResource("12_reveal")
+
 [node name="关卡HUD" parent="." unique_id=1644253128 instance=ExtResource("3_mwar0")]
 TitleText = "第二关 · 盲视"
 NextScene = "res://Scenes/main.tscn"
-
-[node name="BlindReveal" type="Node2D" parent="." unique_id=845925512]
-script = ExtResource("12_reveal")
+_completeTitleText = "感谢体验！"
+_completeSubText = "即将返回主菜单…"

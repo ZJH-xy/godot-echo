@@ -1,0 +1,89 @@
+# LANGUAGE translation for 步步高声 for the following files:
+# res://Scenes/main.tscn
+# res://Scenes/setting.tscn
+# res://Scenes/Elements/关卡HUD.tscn
+# res://Scenes/Level/prologue.tscn
+# res://Scenes/Level/echo.tscn
+# res://Scenes/Level/blind.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 步步高声\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: Scenes/main.tscn
+msgid "《步步高声》"
+msgstr ""
+
+#: Scenes/main.tscn
+msgid "回声机制原型 · 2D 平台跳跃解谜"
+msgstr ""
+
+#: Scenes/main.tscn
+msgid "继续"
+msgstr ""
+
+#: Scenes/main.tscn
+msgid "新开始"
+msgstr ""
+
+#: Scenes/main.tscn
+#: Scenes/setting.tscn
+msgid "设置"
+msgstr ""
+
+#: Scenes/main.tscn
+msgid "退出"
+msgstr ""
+
+#: Scenes/main.tscn
+msgid "English"
+msgstr ""
+
+#: Scenes/setting.tscn
+msgid "分辨率："
+msgstr ""
+
+#: Scenes/setting.tscn
+msgid "手柄震动强度："
+msgstr ""
+
+#: Scenes/setting.tscn
+msgid "游戏音量："
+msgstr ""
+
+#: Scenes/setting.tscn
+msgid "返回"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "TEXT"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "提示"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "J"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "提示文本"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "关卡完成！"
+msgstr ""
+
+#: Scenes/Elements/关卡HUD.tscn
+msgid "即将前往下一章…"
+msgstr ""
+
+msgid "步步高声"
+msgstr ""
