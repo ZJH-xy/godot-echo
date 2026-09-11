@@ -363,6 +363,7 @@ metadata/_edit_lock_ = true
 [node name="Parallax2D1" type="Parallax2D" parent="Parallax2D" unique_id=1949166704]
 scroll_scale = Vector2(0.15, 0.15)
 scroll_offset = Vector2(0, -135)
+repeat_size = Vector2(640, 0)
 
 [node name="背景01" type="Sprite2D" parent="Parallax2D/Parallax2D1" unique_id=240743198]
 position = Vector2(0, -10)
@@ -370,37 +371,21 @@ scale = Vector2(4, 4)
 texture = ExtResource("2_sgytn")
 centered = false
 
-[node name="背景02" type="Sprite2D" parent="Parallax2D/Parallax2D1" unique_id=328917688]
-position = Vector2(640, -10)
-scale = Vector2(4, 4)
-texture = ExtResource("2_sgytn")
-centered = false
-
 [node name="Parallax2D2" type="Parallax2D" parent="Parallax2D" unique_id=1622919682]
 scroll_scale = Vector2(0.35, 0.35)
 scroll_offset = Vector2(0, -29)
+repeat_size = Vector2(640, 0)
 
 [node name="背景01" type="Sprite2D" parent="Parallax2D/Parallax2D2" unique_id=799290455]
 scale = Vector2(4, 4)
 texture = ExtResource("3_n4yvt")
 centered = false
 
-[node name="背景02" type="Sprite2D" parent="Parallax2D/Parallax2D2" unique_id=1164719736]
-position = Vector2(640, 0)
-scale = Vector2(4, 4)
-texture = ExtResource("3_n4yvt")
-centered = false
-
 [node name="Parallax2D3" type="Parallax2D" parent="Parallax2D" unique_id=581247888]
 scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(640, 0)
 
 [node name="背景01" type="Sprite2D" parent="Parallax2D/Parallax2D3" unique_id=357361129]
-scale = Vector2(4, 4)
-texture = ExtResource("4_tivjr")
-centered = false
-
-[node name="背景02" type="Sprite2D" parent="Parallax2D/Parallax2D3" unique_id=1030485175]
-position = Vector2(640, 0)
 scale = Vector2(4, 4)
 texture = ExtResource("4_tivjr")
 centered = false
