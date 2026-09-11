@@ -423,21 +423,21 @@ script = ExtResource("12_hint")
 Text = "WASD 移动　空格跳跃"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="提示区_起手" unique_id=461538901]
-position = Vector2(-70, 1)
+position = Vector2(-69, -3)
 shape = SubResource("RectangleShape2D_2gcac")
 
 [node name="提示区_发声" type="Area2D" parent="." unique_id=2100333002]
-position = Vector2(314, 282)
+position = Vector2(322, 48)
 script = ExtResource("12_hint")
 Text = "按 J 发声，声波会向四周扩散"
 Key = "J"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="提示区_发声" unique_id=553360282]
-position = Vector2(96, -257)
+position = Vector2(101, -22)
 shape = SubResource("RectangleShape2D_sgytn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="提示区_发声" unique_id=659848691]
-position = Vector2(-79, -254)
+position = Vector2(-97, -21)
 shape = SubResource("RectangleShape2D_sgytn")
 
 [node name="Player" parent="." unique_id=1019352238 instance=ExtResource("2_player")]
